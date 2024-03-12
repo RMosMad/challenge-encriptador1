@@ -1,0 +1,106 @@
+body{
+    background-color: skyblue;
+}
+
+main{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    background-color: skyblue;
+}
+
+.textoEntrada{
+    display: inline-block;
+    width: auto;
+}
+
+.textoE{
+    margin-left: 2%;
+    margin-bottom:  40%;
+    border-radius: 3%;
+    border: 3px solid whitesmoke;
+    box-shadow: 10px 10px 5px 5px tomato; 
+    background-color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+   
+    width: auto;
+}
+.textoE:active{
+    border: 5px solid rgb(111, 108, 108);
+}
+
+.botones{
+margin-bottom: 10px;
+width: 400px;
+padding: 20px;
+
+}
+.encriptar, .desencriptar{
+    background-color:rgb(111, 108, 108);
+    color: rgb(47, 3, 47);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: serif;
+    text-align: center;
+    margin: auto;
+    border-radius: 30px;
+    border: 2px solid whitesmoke;
+    box-shadow: 10px 10px 60px 5px whitesmoke;  
+}
+.encriptar:hover{
+    color: bisque;
+    cursor: pointer;
+    font-size: 23px;
+    border: 3px solid whitesmoke;
+}
+.encriptar:active{
+    color: skyblue;
+    cursor: pointer;
+    border: 3px solid tomato;
+    box-shadow: 2px 2px 90px 5px tomato;
+}
+.desencriptar:hover{
+    color: bisque;
+    cursor: pointer;
+    font-size: 23px;
+    border: 3px solid whitesmoke;
+}
+.desencriptar:active{
+    color: skyblue;
+    cursor: pointer;
+    border: 3px solid tomato;
+    box-shadow: 2px 2px 90px 5px tomato;
+}
+
+.textoSalida{
+    display: inline-block;
+    position: absolute;
+    width: auto;
+}
+.Enigmatico{
+    border-radius: 3%;
+    border: 3px solid whitesmoke;
+    box-shadow: 10px 10px 5px 5px rgb(193, 228, 243); 
+    background-color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: darkblue;
+    font-weight: 800;
+
+    
+}
+.Enigmatico:active{
+    border: 5px solid rgb(111, 108, 108);;
+}
+
+@media screen and (max-width:350px){
+    .Enigmatico{
+        margin: auto ;
+    }
+
+    .encriptar, .desencriptar{
+        width: auto;
+    }
+}
+
+

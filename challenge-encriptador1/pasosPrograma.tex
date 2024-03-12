@@ -1,0 +1,174 @@
+  *Pasos para el programa en Js
+
+  1-deberia iniciar el programa como esta el html5
+
+  2- crea elementos de captura para asignarlos uno para fotos y uno para textos relacionados al secction2
+
+  3- crear un array de validaciones de tipo caracter, esto con la idea de reconocer cuando una palabra ya esta encriptada o no.
+
+  4- crear y llenar vector de 4 posiciones  este llena de imagenes referentes a un mismo tema, y de igual 
+  forma un vector que contenga las mismas caracteristicas pero de tipo caracter, que contenga mensajes que 
+  referencia a las imagenas del otro vector 
+  
+  5-hay que crear una funcion recursiva, que permita hacer una repeticion constante mientras no ocurra una accion del usuario
+  
+  6- crea una variable tipo caracter candado sin valor
+ 
+  4- crear una condicion para verificar que esta contenido en el texarea principal y en dependencia de eso crear ciertas acciones:
+    
+      *acciones si no existe texto:
+         - crear una funcion aleatorea que genere un numero el cual va a aestar dimencionado por cualquiera de los arrays ya creados, tome ese numero 
+         y lo guarde en una variabble
+
+         -llamar a la funcion aleatorea dos veces por cada condicion para que genero dos numero los cuales van a determinar la aleatoriedad de textos e imagenes
+
+         - asignar el valor que contien especificamente los arrays con el numero aleatoreo y guardadrlos en dos variables, las cuales vamos a mostrar en nuetsra 
+         web a traves del DOM en dos div que ya estan creados y estilizados,
+
+         crear una funcion de temporizador que permitira dejar las imagenes y el texto por un tiempo determinado y solicitar llamar la funcion principal para hacer la recursividad requerida
+
+      *acciones si existe texto entonces :
+
+        -llamar a la funcion aleatorea dos veces por cada condicion para que genero dos numero los cuales van a determinar la aleatoriedad de textos e imagenes referentes a si hay un movimiento usuario 
+
+        - asignar el valor que contien especificamente los arrays con el numero aleatoreo y guardadrlos en dos variables, las cuales vamos a mostrar en nuetsra 
+        web a traves del DOM en dos div que ya estan creados y estilizados
+
+        - crear un condicional, para realizar las acciones de eincriptado o desencriptados segun parametro expresiones de validadcion
+
+        - la expresion a evaluar es la siguiente:
+            + creamos un for para recorrer el array de validaciones ay comparar si la variable vandado contiene 
+           for(let i=0; i < clave.length; i++){
+              if(ingreso.includes(clave[i])){ 
+              }        
+          }
+
+          *acciones si ingreso incluye validaciones:
+             
+              a- desabilitar el boton de codifique
+              b- hacer un condicional para determinar si el boton decodifica fue presionado o si el usuario realizo la accion de decodificar 
+
+              *acciones si presiono boton:
+                 -llamar a la funcion desencritado();
+                 -dentro de esta sintaxis tambien se debe mostrar el resultado en el texarea2
+                 -limpiar el texarea1
+                 -dentro de la funcion de desencriptado debe estar las sintaxis similiar a la de la funcion repetir para ejecutaracciones similares, como las llamada a la funcion generear numero aleatoro, esto para colocar la imagen y el texto relacionado al desencriptado, en este pedazo de codigo.
+                 -se llama a la  funcion de temporizacion(); pero en este caso para asigan caracteres vacios ("") al texarea2 para hacer una limpieza despues de cierto tiempo
+                 -llamar funcion repetir();
+              
+              *acciones si no presiono boton:
+                -llama a la funcuion temporizador() repetir y se ajusta el tiempo a 3000;
+          
+         *acciones si ingreso no incluye validaciones:
+
+              a- desabilitar el boton de decodifique
+              b- b- hacer un condicional para determinar si el boton codifica fue presionado o si el usuario realizo la accion de codificar 
+
+              *acciones si presiono boton:
+                  - llamar a la funcion encritado();
+                  - limpiar el texarea1
+                  - dentro de la sintaxis de la funcion encriptado() debemo agregar el siguiente codigo que va a permitir que la frase ecriptada contenga una validacion:
+
+                      a. llamar funcio aleatorea();y el resultado guardarlo en una varable
+                      b. crea una variable de nombre candado a la cual se la va a asignar el array de validaciones conteniendo la posicion con el numero aleatorio
+                      c.crea otra varable de nombre endriptado a la cual se le va a asignar los valores concatenados de candado + ingreso, de esta forma la variable encriptado generara un valor de ese contexto
+
+                  - dentro de esta sintaxis tambien se debe mostrar el resultado en el texarea2
+                  - dentro de la funcion de encriptado debe estar las sintaxis similiar a la de la funcion repetir para ejecutaracciones similares, como las llamada a la funcon generear numero aleatori, esto para colocar la imagen y el texto relacionado al encriptado, en este pedazo de codigo.
+                  - se llama a la  funcion de temporizacion(); pero en este caso para asiganr caracteres vacios ("")  al texarea2 para hacer una limpieza despues de cierto tiempo
+                  - llamar funcion repetir();
+
+              *acciones si no presiono boton:
+                    - llama a la funcuion temporizador() repetir y se ajusta el tiempo a 3000;
+
+            ULTIMOS CAMBIOS VIERNES 8
+
+            - en la LINEA 286 se solicita habilitar el boton de encriptado nuevamente para corregir un posible error de bloqueo de ambos botones a la vez 
+            ya que este boton es bloqueado despues que la validacion ejecuta una accion, y no vuelve a desabilitar a menos que se llame a la funcion repetir();
+            por ende en este punto se va a hacer un llamdo a la funcion repetirencriptado(); y en este punto para encriptae el boton deberia estar ahabilitado 
+            
+            
+                    "  //habilitacion del boton codificar para codificaion de una frase 
+                        document.getElementById("codifique").disabled = false;
+                        console.log("deberia haber habilitado el boton de codificacion ");
+
+                        //en este punto se debe desabilitar el boton de desencriptar ya que esta habilitado para evitar su accionar se bloquea nuevamente
+                        
+                        //desabilitacion del boton decodificar para evitar recodificaion de una frase 
+                        document.getElementById("decodifique").disabled = true;
+                        console.log("deberia haber desabilitado el boton de decodificacion ");  
+
+                        repetirencriptado()  "
+
+        
+            - En la LINEA 335 de prueva.js, colocamos este codigo que ejecuta la accion de validar si en este punto el usuario borro o pego una frase, como dicha frase 
+             no se sabe que va a ser, se realizan comparaciones para este punto y se envian acciones de respuesta segun la peticion, este codigo es un repetido en varios 
+             lugares del programa, de hecho aqui tambien se hace la solictud de bloque y desbloqueo de botones 
+
+
+                   
+                        " //se hace otra comparativa para saber si el texarea1 esta limpio y volver al principio del codigo
+                        if (repitedesencripta1 === "") {
+                        console.log("deberia haber llamado a repetir() con retardeo de 1seg ");
+                        //funcion de temporizador repetir para volver al inicio despues de 2seg
+                        setTimeout(() => repetir(), 1000);
+
+                        //este sino es el de la comparativa de repitedesencripta1 texarea vacia;
+                        }else{ 
+
+                            //se llama a la funcion de validaciones para saver si el texto sigue siendo un texto a desencritar, y por parametros le vamos a pasar el valor del texarea1 que esta en este momento
+                            if(validacion(repitedesencripta1) === "desencriptar"){
+                                console.log("estoy en condicional de validacion esta validacion es verdadera")
+
+                                //imagenes y textos aleatoreos indicanto que si existe actividad usuaria por el lado de encriptaciones 
+                                const eleimgvida = generarAleatorio(HayVidaimg.length)
+                                const eletexvida = generarAleatorio(HayVidaTex.length)
+                                let imgaleatory1= HayVidaimg[eleimgvida];
+                                console.log("mostrando el valor de imagen aleatorea ", imgaleatory1);
+                                let texaleatory1 = HayVidaTex[eletexvida];
+                                console.log("mostrando el valor de los textos ", texaleatory1)
+
+                                //asignando los valores a los divs aleatoreos
+                                divImag.src = imgaleatory1;
+                                divText.innerHTML = texaleatory1;
+                        
+                                //funcion de temporizador recursivo
+                                setTimeout(() => repetirdesencripta(), 3000);
+
+                                //este sino es la parte falsa de validaciones de repetirdesencripta()
+                            } else{
+                                console.log("estamos en comparativa falsa de la funcion  repetirdesencripta(), la variable repetirdescritiva es;",repitedesencripta);
+                                
+                                //habilitacion del boton codificar para codificaion de una frase 
+                                document.getElementById("codifique").disabled = false;
+                                console.log("deberia haber habilitado el boton de codificacion ");
+
+                                //en este punto se debe desabilitar el boton de desencriptar ya que esta habilitado para evitar su accionar se bloquea nuevamente
+                                
+                                //desabilitacion del boton decodificar para evitar recodificaion de una frase 
+                                document.getElementById("decodifique").disabled = true;
+                                console.log("deberia haber desabilitado el boton de decodificacion ");  
+                            
+                            
+                                //se supone que el texto ingresado en este punto es una frase para encriptar por ende se llamara a la funcion repetirencripta();
+                                repetirencripta();
+                            }
+                        } "
+
+            - En la LINEA 443 de prueba.js se pega este pedaxo de codigo que va a ejecutar la accuon contraria al codigo que esta en la LINEA 286 de prueva.js lo cual es habilitar y desabilitar botones 
+                            
+                                "//desabilitacion del boton codificar para que no hacer recodificaion de una frase 
+                                document.getElementById("codifique").disabled = true;
+                                console.log("deberia haber desabilitado el boton de codificacion ");
+
+                                //en este punto se debe habilitar el boton de desencriptar ya que esta frase es un encriptado
+                                //habilitacion del boton decodificar 
+                                document.getElementById("decodifique").disabled = false;
+                                console.log("deberia haber habilitado el boton de decodificacion ");  
+                                    
+                                //se supone que el texto ingresado en este punto es una frase para desencriptar por ende se llamara a la funcion repetirdesencripta();
+                                repetirdesencripta();"
+
+            - En la LINEA 
+       
+          

@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+/* Encriptador - 1 Desktop */
+
+body{
+    background-color:dimgrey;
+}
+
+header{
+    width: 1040px;
+    height: 100px;
+    padding: 15px;
+}
+
+
+/*el Logo*/
+.Logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    
+}
+
+/*La Marca*/
+.img1{
+    background-color: dimgrey;
+    width:120px;
+    height: 120px;
+    margin-left: 80px;
+    margin-top: 15px;
+    border: 4px solid  skyblue;
+    border-radius: 50%;
+    box-shadow: 10px 10px 80px 5px  whitesmoke; 
+}
+
+/*animacion logo*/
+.img1:hover{    
+    -webkit-transform: rotateY(360deg);
+    transition: 2s ease-in-out;
+    -webkit-border-radius: 50%; 
+    border: 5px solid whitesmoke;
+    cursor: pointer;
+    box-shadow: 10px 10px 60px 5px tomato; 
+    background: tomato;
+}
+
+/*titulo de mi sitio web github*/
+.titulo{
+    text-align: center;
+    position:absolute;
+    top: 20px;
+    margin-left: 370px;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(47, 3, 47);
+    text-shadow: 4px 4px 4px skyblue;  
+}
+
+/*Direccion de mi sitio web github*/
+.git{
+    text-align: center;
+    position:absolute;
+    top: 150px;
+    margin-left: 260px;
+    font-size: 25px;
+    color: whitesmoke;
+    text-shadow: 4px 4px 4px skyblue ;  
+}
+
+
+/*la base del css puesta en el main */
+main{
+    position: absolute;
+    width: 1440px;
+    height: 1024px;
+    display:flex;
+    justify-content: space-around;  
+}
+
+/*Primer texarea*/
+.textoE{
+    position: absolute;
+    width: 577px;
+    height: 90px;
+    left: 240px;
+    top: 168px;
+    border-radius: 10px;
+    border: 4px solid whitesmoke;
+    box-shadow: 10px 10px 80px 5px  whitesmoke; 
+    background-color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 150%;
+    color: tomato;
+    font-weight: bold;
+    }
+
+/*cambios en texarea1*/
+.textoE:hover{
+    cursor: pointer;
+    border: 3px solid tomato;
+    box-shadow: 10px 10px 80px 5px  tomato;
+}
+.textoE:active{
+    border: 5px solid tomato;
+    box-shadow: 10px 10px 80px 5px  tomato;
+}
+
+/*color placeholder*/
+.textoE::placeholder{
+    color:  rgb(47, 3, 47);
+    text-shadow: 5px 5px 5px skyblue;
+}
+
+/*aviso*/
+.precaucion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    color: whitesmoke;
+    text-shadow: 5px 5px 5px  rgb(111, 108, 108);
+    font-size: 18px;
+    font-weight:bolder;
+    position: absolute;
+    width: 350px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
+}
+
+/*botone para crear arcano*/
+.botones{
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;    
+    top: 885px;
+}
+/*stylo de botones */
+.encriptar, .desencriptar{
+    width: 328px;
+    height: 67px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background-color:rgb(111, 108, 108);
+    color: rgb(47, 3, 47);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: serif;
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid whitesmoke;
+    box-shadow: 10px 10px 60px 5px whitesmoke;  
+}
+/*botones animados*/
+.encriptar:hover{
+    color: bisque;
+    cursor: pointer;
+    font-size: 30px;
+    border: 4px solid whitesmoke;    
+}
+.encriptar:active{
+    color: skyblue;
+    cursor: pointer;
+    border: 4px solid tomato;
+    box-shadow: 2px 2px 90px 5px tomato;
+}
+.encriptar:disabled {
+    background-color: red;
+    cursor: not-allowed;
+    color: black;
+    border: 4px solid black;
+    box-shadow: 2px 2px 90px 5px black;
+}
+.desencriptar:hover{
+    color: bisque;
+    cursor: pointer;
+    font-size: 30px;
+    border: 4px solid whitesmoke;
+}
+.desencriptar:active{
+    color: skyblue;
+    cursor: pointer;
+    border: 4px solid tomato;
+    box-shadow: 2px 2px 90px 5px tomato;
+}
+.desencriptar:disabled{
+    background-color: red;
+    cursor: not-allowed;
+    color: black;
+    border: 4px solid black;
+    box-shadow: 2px 2px 90px 5px black;
+}
+
+/*Rectangulo de salida o seccion2*/
+.textoSalida{
+    position: relative;
+    width: 400px;
+    height: 944px;
+    margin: auto;
+    margin-left: 1000px;
+    /* fondo */
+    background: url("/imagenes/zodiac1.png"); 
+    background-repeat: no-repeat;
+    background-position:top left;
+    background-size:cover;
+    /* sombras y bordes  */
+    box-shadow: 10px 10px 50px 2px dimgrey;;
+    border: 4px solid whitesmoke;
+    border-radius: 32px;
+}
+/*Imagenes de busqueda se espera sean aleatoreas */
+.imagenesAleatoreas{
+    width: 336px;
+    height: 304px;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 30px;
+    /* fondo */
+    background: url("/imagenes/zodiac1.png"); 
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+
+/* Ajuste de tamaño e la imagen aingresar */
+.imagenesAleatoreas img{
+    width: 336px;
+    height: 304px;
+    border-radius: 30px;   
+}
+/*Textos Aleatoreos*/
+.contenedorTexto{
+    width: 100%;
+    height: 170px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+/*cambio de aspecto de los textos*/
+.contenedorTexto h3{
+    color: rgb(47, 3, 47);
+    text-shadow: 5px 5px 5px skyblue;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+/*texto cambiante al copiar*/
+.contenedorTexto p{
+    color:red;
+    text-shadow: 3px 3px 3px whitesmoke;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 25px;
+}
+
+/*texArea donde va a estar el resultado*/
+.salidas{
+    width: 100%;
+    height: 170px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+}
+.Enigmatico{
+    margin-left: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 336px;
+    height: 100px;
+    border-radius: 15px;
+    border: 3px solid skyblue;
+    box-shadow: 2px 2px 10px 1px tomato; 
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;  
+    background-image: url(/imagenes/fondo-piezas.jpg);
+    font-family: "Anta", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(48, 48, 48);
+    font-weight: 900;
+}
+.Enigmatico:hover{
+    cursor: pointer;
+    border: 5px solid tomato;
+}
+.Enigmatico:active{
+    border: 5px solid tomato;
+}
+
+/*copiado de codigo*/
+.copiar{
+    width: 100%;
+    height: 81px;
+    margin: auto;
+    border-bottom-right-radius:30px ;
+    border-bottom-left-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+/*personalizando el boton*/
+.copiar button{
+    margin-left: 45px;
+    width: 300px;
+    height: 55px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background-color:rgb(111, 108, 108);
+    color: rgb(47, 3, 47);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: serif;
+    text-align: center;
+    border-radius: 30px;
+    border: 3px solid skyblue;
+    box-shadow: 5px 5px 40px 5px skyblue; 
+}
+/*efectos del boton */
+.copiar button:hover{
+    color: bisque;
+    cursor: pointer;
+    font-size: 30px;
+    border: 4px solid whitesmoke;
+}
+.copiar button:active{
+    color: skyblue;
+    cursor: pointer;
+    border: 4px solid tomato;
+    box-shadow: 2px 2px 90px 5px tomato;
+}
+
+/*Pie de pagina compartido por productos y contactos */
+.home{
+    position:absolute;
+    width: 1320px;
+    height: 130px;
+    margin: auto; 
+    top: 1160px;
+    text-align: center;
+    padding: 40px;
+    background-color:dimgrey;
+    
+ }
+
+ .footer{
+    width: 165px;
+    height: 165px;
+    margin: auto;
+    margin-right: 220px;
+    box-shadow: 4px 4px 80px 4px skyblue;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+ }
+  
+ .copyright{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(47, 3, 47);
+    text-shadow: 4px 4px 4px skyblue ;
+    font-size: 25px;
+    position: relative;
+    margin: auto;
+    margin-right: 220px;
+ }
+
+ /*--------------------------------------------------------------------------------------------------*/
+
+ /*               SECCION RESPONSIVE                     */
+
+@media screen and (max-width:550px){
+
+/*la base del css puesta en el main */
+ main{
+    width: 800px;
+    height: 900px;
+    margin-right: 300px;
+    margin-left: 105px;
+}
+
+/*Primer texarea*/
+.textoE{
+    width: auto;
+    height: auto;
+    margin: auto;
+    font-size: 25px;
+    }
+
+/*aviso*/
+.precaucion{
+    width: 90%;
+    height: 18px;
+    margin: auto;
+}
+
+/*botone para crear arcano*/
+.botones{
+    display: flex;
+    gap: 24px;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+/*stylo de botones */
+.encriptar, .desencriptar{
+    width: 90%;
+    height: 80%;
+    font-size: 20px; 
+}
+
+/*Rectangulo de salida o seccion2*/
+.textoSalida{
+    width:auto;
+    height:auto;
+    margin: auto;
+}
+
+/*Imagenes de busqueda se espera sean aleatoreas */
+.imagenesAleatoreas{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+/* Ajuste de tamaño e la imagen aingresar */
+.imagenesAleatoreas img{
+    width: 1000%px;
+    height: 100%;  
+}
+
+/*Textos Aleatoreos*/
+.contenedorTexto{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+
+}
+
+/*cambio de aspecto de los textos*/
+.contenedorTexto h3{
+    font-size: 25px;
+   
+}
+/*texto cambiante al copiar*/
+.contenedorTexto p{
+    font-size: 10px;
+}
+
+/*texArea donde va a estar el resultado*/
+.salidas{
+    width: 100%;
+    height:90%;
+    margin: auto;
+
+}
+
+.Enigmatico{
+   margin: auto;
+    width: 100%;
+    height: 70px;
+    font-size: 25px;
+
+}
+
+/*copiado de codigo*/
+.copiar{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+}
+
+/*personalizando el boton*/
+.copiar button{
+    margin: auto;
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+}
+/*Pie de pagina */
+.footer{
+    margin: auto;
+    width: auto;
+}
+
+.footer{
+    width:100px;
+    height:100px;
+    margin-right: 500px;
+ }
+  
+ .copyright{
+    font-size: 20px;
+    margin-right: 500px;
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
