@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------------------------------------*/
                                 //CODIGO JS DE CHALLENGE ENCRIPTADOR
 /*-----------------------------------------------------------------------------------------------------------------*/
-
+// Reorganización
 ///crea elementos de captura
 const textoentrada = document.getElementById("texarea1");
 const textosalida = document.getElementById("texarea2");
