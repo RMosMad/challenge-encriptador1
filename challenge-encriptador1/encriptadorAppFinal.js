@@ -30,10 +30,10 @@ const validaciones = [
 
 //llenando array1 de imagenes
 const noHayVidaimg = [
-    ["/imagenes/buscando-algo.jpg"],
-    ["/imagenes/buscando-algo1.jpg"],
-    ["/imagenes/buscando-algo2.jpg"],
-    ["/imagenes/buscando-algo3.jpg"],
+    ["imagenes/buscando-algo.jpg"],
+    ["imagenes/buscando-algo1.jpg"],
+    ["imagenes/buscando-algo2.jpg"],
+    ["imagenes/buscando-algo3.jpg"],
 ];
 
 //llenado de array1 de textos
@@ -284,7 +284,7 @@ function contieneMayusculas(str) {
 
 //funcion de validacion de caracteres  pos si la frase ingresada presenta un caracter especial
    function contieneCaracter(str) {
-    return  /[`!@#$%^&*()_°+\-=\[\]{};':"\\|,´.<>\/?~]/.test(str);
+    return  /[0-9`!@#$%^&*()_°+\-=\[\]{};':"\\|,´.<>\/?~]/.test(str);
    }
    
 /*-----------------------------------------------------------------------------------------------------------------*/
@@ -382,6 +382,13 @@ function repetirdesencripta1() {
     console.log(
         " estamos en la verificacion de el accionamiento del boton decodificado el cual fue accionado"
     );
+    
+    //en este punto se debe desabilitar el boton de desencriptar ya que esta habilitado para evitar que desencriptenuevamente
+
+    //desabilitacion del boton decodificar para evitar recodificaion de una frase
+    document.getElementById("decodifique").disabled = true;
+    console.log("deberia haber desabilitado el boton de decodificacion ");
+
     const eleimgdesencripta = generarAleatorio(desencriptaimg.length);
     const eletexdesencripta = generarAleatorio(desencriptaTex.length);
     let imgaleatory2 = desencriptaimg[eleimgdesencripta];
@@ -429,6 +436,12 @@ function repetirdesencripta1() {
                 divImag.src = imgaleatory1;
                 divText.innerHTML = texaleatory1;
 
+                //en este punto se debe habilitar el boton de desencriptar ya que estaba desabilitado para evitar que reencriptara
+
+                //habilitacion del boton decodificar para poder decodificar nueva
+                document.getElementById("decodifique").disabled = false;
+                console.log("deberia haber habilitado el boton de decodificacion ");
+
                 //funcion de temporizador recursivo
                 setTimeout(() => repetirdesencripta(), 3000);
 
@@ -436,7 +449,7 @@ function repetirdesencripta1() {
             } else {
                 console.log(
                     "estamos en comparativa falsa de la funcion  repetirdesencripta(), la variable repetirdescritiva es;",
-                    repitedesencripta
+                    repitedesencripta1
                 );
 
                 //habilitacion del boton codificar para codificaion de una frase
@@ -568,7 +581,12 @@ function repetirencripta1() {
     //el boton de codificado fue accionado
     console.log(
         " estamos en la verificacion de el accionamiento del boton decodificado el cual fue accionado"
-    );
+        );
+      
+    //desabilitacion del boton codificar para que no hacer recodificaion de una frase
+    document.getElementById("codifique").disabled = true;
+    console.log("deberia haber desabilitado el boton de codificacion ");
+    
     const eleimgencripta = generarAleatorio(encriptadoimg.length);
     const eletexencripta = generarAleatorio(encriptadoTex.length);
     let imgaleatory3 = encriptadoimg[eleimgencripta];
@@ -631,6 +649,10 @@ function repetirencripta1() {
                 //asignando los valores a los divs aleatoreos
                 divImag.src = imgaleatory1;
                 divText.innerHTML = texaleatory1;
+                
+                //habilitacion del boton codificar ya que es otra frase a encriptar
+                document.getElementById("codifique").disabled = false;
+                console.log("deberia haber desabilitado el boton de codificacion ");
 
                 //funcion de temporizador
                 setTimeout(() => repetirencripta(), 3000);
